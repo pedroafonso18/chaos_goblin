@@ -1,0 +1,30 @@
+[goblin]
+# This will check if the goblin is available to cause havoc.
+enabled = true
+# This checks if the goblin is scheduled, e.g. : has a crontab
+is_scheduled = true
+# This is pretty self explanatory, if the is_safe flag is on, it will not ACTUALLY break the environments, just simulate it.
+is_safe = true
+# The level variable sees which level of access the goblin has. if "production" is on, it will break services flagged as production (you can flag each service for "production" or "testing")
+# but if it is only "testing" it will only target services flagged as "testing"
+level = "testing"
+# This is pretty self explanatory, the crontab at which the goblin will work.
+crontab = "* * * *"
+
+[database]
+# Db stuff.
+host = "db.host"
+name = "db.name"
+user = "db.user"
+password = "db.password"
+# For example, here we add this db as a "production" level access. This means that if we try to access it when the goblin is in "testing" level it won't work.
+level = "production"
+
+[machine]
+# Virtual machine stuff.
+ip = "0.0.0.0"
+user = "user"
+password = "admin"
+# This tells if the goblin can target docker running on that machine.
+docker = true
+level = "testing"
