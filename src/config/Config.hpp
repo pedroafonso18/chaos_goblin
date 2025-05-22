@@ -26,6 +26,10 @@ struct Goblin{
         bool docker;
         std::string level;
     };
+
+    Goblin_goblin goblin;
+    Goblin_database database;
+    Goblin_machine machine;
 };
 
 class Config {
