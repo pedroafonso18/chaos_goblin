@@ -9,7 +9,7 @@ is_safe = true
 # but if it is only "testing" it will only target services flagged as "testing"
 level = "testing"
 # This is pretty self explanatory, the crontab at which the goblin will work.
-crontab = "* * * *"
+crontab = "* * * * *"
 
 [database]
 # Db stuff.
